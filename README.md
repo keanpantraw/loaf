@@ -30,6 +30,7 @@ Sample:
 * For feature:
 
 ::
+
 	Feature: Monday feature
 	Scenario: Typical Monday Scenario
 	Whethever I go "home"
@@ -54,5 +55,5 @@ Sample:
 
 * By using command:
 
-loaf --prepositions Whethever,Always test1.test
+``loaf --prepositions Whethever,Always test1.test``
 
