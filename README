@@ -1,52 +1,58 @@
 Lettuce Stub Methods Generator
+=============================
 
-Provide stories as command line arguments:
+* Provide stories as command line arguments:
 
-loaf test1.test test2.test test3.test
+``loaf test1.test test2.test test3.test``
 
 and get your stubs:
 
 test1.py test2.py test3.py
 
 
-Or in 1 file:
+* Or in 1 file:
 
-loaf test1.test test2.test --to __init__.py
+``loaf test1.test test2.test --to __init__.py``
 
 
-Or with different prepositions:
+* Or with different prepositions:
 
-loaf --prepositions=When,Then,And,Require test1.test
+``loaf --prepositions=When,Then,And,Require test1.test``
 
-Or with different imports:
+* Or with different imports:
 
-loaf --imports imports_template test1.test
+``loaf --imports imports_template test1.test``
 
 
 Sample:
+======
 
-For feature:
+* For feature:
 
-Feature: Monday feature
-Scenario: Typical Monday Scenario
-Whethever I go "home"
-Always I return at "work"
-
-We get stubs:
-
-
-m lettuce import step
+::
+	Feature: Monday feature
+	Scenario: Typical Monday Scenario
+	Whethever I go "home"
+	Always I return at "work"
 
 
-@step(u'I go "([^"]*)"')
-def whethever_i_go_group1(step, group1):
-    pass
+* We get stubs:
 
-@step(u'I return at "([^"]*)"')
-def always_i_return_at_group1(step, group1):
-    pass
+::
 
-By using command:
+	from lettuce import step
+
+	
+	@step(u'I go "([^"]*)"')
+	def whethever_i_go_group1(step, group1):
+	    pass
+	
+	@step(u'I return at "([^"]*)"')
+	def always_i_return_at_group1(step, group1):
+	    pass
+
+
+* By using command:
 
 loaf --prepositions Whethever,Always test1.test
 
