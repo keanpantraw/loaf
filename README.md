@@ -33,7 +33,7 @@ Sample:
 
 	Feature: Monday feature
 	Scenario: Typical Monday Scenario
-	Whethever I go "home"
+	Wherever I go "home"
 	Always I return at "work"
 
 
@@ -55,5 +55,5 @@ Sample:
 
 * By using command:
 
-``loaf --prepositions Whethever,Always test1.test``
+``loaf --prepositions Wherever,Always test1.test``
 
