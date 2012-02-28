@@ -43,7 +43,6 @@ class Stub(object):
     
     def stub(self):
         decorator = "@step(u'%s')" % self.regex
-        method_name = Stub.__STRIP.sub('', self.regex)
         signature = 'def %s:' % self.signature
         return '%s\n%s\n    pass\n\n' % (decorator, signature)
 
