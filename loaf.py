@@ -24,7 +24,6 @@ def usage():
 
 class Stub(object):
     
-    __PARAMETER = re.compile(r'"[^"]*?"')
     __STEP_HACK = re.compile(r'(\w|").*')
     __EAT_PREFIX = re.compile(r'(?P<step>.*)')
     __STRIP = re.compile(r'\W+')
